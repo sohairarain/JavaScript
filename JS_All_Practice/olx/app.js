@@ -17,7 +17,7 @@ function rendarcard() {
   const nextBacth = allproducts.slice(count, count + limit);
 
   nextBacth.forEach((product) => {
-    const { thumbnail , title , price , id } = product;
+    const { thumbnail, title, price, id } = product;
 
     container.innerHTML += `
         
@@ -37,16 +37,46 @@ function rendarcard() {
   });
 
   count += limit;
-  
-  if(count >= allproducts.length){
-    document.getElementById('see-more-btn').style.display='none'
+
+  if (count >= allproducts.length) {
+    document.getElementById("see-more-btn").style.display = "none";
     // return;
   }
-
 }
 
-function singleProduct(id){
-    console.log(id)
-    
+function singleProduct(id) {
+  window.location.href = `singleProduct.html?id=${id}`;
+}
 
+// open popUp for click button logic
+
+function openNow() {
+  const popUp = document.getElementById("myPopup");
+  popUp.style.display = "flex";
+}
+function closeNow() {
+  const popUp = document.getElementById("myPopup");
+  popUp.style.display = "none";
+}
+
+let userData = JSON.parse(localStorage.getItem("userinformation")) || [];
+
+function login() {
+  const userEmail = document.getElementById("userEmail");
+  const userPass = document.getElementById("userPassword");
+
+  const userObj = new obj(userEmail.value, userPass.value);
+userData.push(userObj)
+
+localStorage.setItem("userinformation",   JSON.stringify(userData));
+
+  userEmail.value = "";
+  userPass.value = "";
+}
+
+class obj {
+  constructor(Email, pass) {
+    this.Email = Email;
+    this.pass = pass;
+  }
 }
