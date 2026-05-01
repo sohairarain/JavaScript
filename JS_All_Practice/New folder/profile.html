@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - HelpHub AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header class="navbar container">
+    <div class="logo-box">
+        <div class="logo">H</div>
+        <span>HelpHub AI</span>
+    </div>
+    <nav class="nav-right">
+        <a href="index.html">Dashboard</a>
+        <a href="./home.html">Onboarding</a>
+        <a href="./profile.html" class="active-tab">Profile</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="profile-banner">
+        <p class="label">PROFILE</p>
+        <h1>Ayesha Khan</h1>
+        <p class="location-tag">Both • Karachi</p>
+    </section>
+
+    <div class="profile-grid">
+        <div class="reputation-card">
+            <p class="section-label">PUBLIC PROFILE</p>
+            <h2>Skills and reputation</h2>
+            
+            <div class="stats-list">
+                <div class="stat-item">
+                    <span>Trust score</span>
+                    <strong>100%</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Contributions</span>
+                    <strong>35</strong>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <p class="mini-label">Skills</p>
+                <div class="tag-row">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">Career Guidance</span>
+                </div>
+            </div>
+
+            <div class="badges-section">
+                <p class="mini-label">Badges</p>
+                <div class="tag-row">
+                    <span class="badge-tag">Design Ally</span>
+                    <span class="badge-tag">Fast Responder</span>
+                    <span class="badge-tag">Top Mentor</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-card">
+            <p class="section-label">EDIT PROFILE</p>
+            <h2>Update your identity</h2>
+            
+            <form class="edit-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" value="Ayesha Khan">
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input type="text" value="Karachi">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Skills</label>
+                    <input type="text" value="Figma, UI/UX, HTML/CSS, Career Guidance">
+                </div>
+
+                <div class="input-group">
+                    <label>Interests</label>
+                    <input type="text" value="Hackathons, UI/UX, Community Building">
+                </div>
+
+                <button type="submit" class="btn-save">Save profile</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
