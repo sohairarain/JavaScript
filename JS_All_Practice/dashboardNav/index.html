@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Sohair Dev</h2>
+            <ul>
+                <li class="active">Dashboard</li>
+                <li onclick="pageSet()">Users</li>
+                <li onclick="pageSet()">Settings</li>
+               <a href="./users.html"> <li onclick="pageSet()">Logout</li></a>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Welcome Back!</h1>
+                <div class="user-info">Admin Account</div>
+            </header>
+
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>$45,200</p>
+                </div>
+                <div class="card">
+                    <h3>Active Now</h3>
+                    <p>42</p>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="table-container">
+                    <!-- Yahan aap table ya chart dal sakte hain -->
+                    <p>Sohair ne login kiya...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+<script src="app.js"></script>    
+</body>
+</html>
