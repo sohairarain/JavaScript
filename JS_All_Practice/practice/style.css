@@ -1,0 +1,158 @@
+:root {
+  --bg-main: #0a0a0c;
+  --bg-card: #121215;
+  --border-color: #222227;
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --accent-blue: #3b82f6;
+  --accent-green: #22c55e;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.registration-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 540px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.auth-header {
+  margin-bottom: 32px;
+}
+
+.auth-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.auth-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.input-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.input-field input {
+  background: #18181b;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Primary Form Button */
+.primary-btn {
+  background: var(--text-main);
+  color: var(--bg-main);
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 8px;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+/* Step 2 Success Box */
+.account-success-box {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.account-success-box span {
+  display: block;
+  color: var(--accent-green);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.account-number {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.account-success-box p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.primary-btn.success {
+  background: var(--accent-green);
+  color: #ffffff;
+}
+
+/* Utility Hidden Class */
+.hidden {
+  display: flex ;
+}
+
+@media (max-width: 480px) {
+  .form-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

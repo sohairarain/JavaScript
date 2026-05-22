@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="registration-container">
+  <div class="auth-card">
+    
+    <div class="auth-header">
+      <h2 id="step-title">Create your account</h2>
+      <p id="step-desc">Step 1 of 2: Personal details</p>
+    </div>
+
+    <form id="detailsForm" class="auth-form">
+      <div class="form-grid">
+        <div class="input-field">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" required placeholder="John">
+        </div>
+        <div class="input-field">
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="lastName" required placeholder="Doe">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="input-field">
+          <label for="phoneNum">Phone Number</label>
+          <input type="number" name="phoneNum" id="phoneNum" required placeholder="03001234567">
+        </div>
+        <div class="input-field">
+          <label for="gmail">Gmail Address</label>
+          <input type="email" name="gmail" id="gmail" required placeholder="name@gmail.com">
+        </div>
+      </div>
+
+      <div class="input-field">
+        <label for="cnicNum">CNIC Number</label>
+        <input type="number" name="cnicNum" id="cnicNum" required placeholder="42101XXXXXXX">
+      </div>
+
+      <button type="button" class="primary-btn" onclick="createAcc()">Continue to Account Generation</button>
+    </form>
+
+    <form id="passwordForm" class="auth-form hidden">
+      
+    </form>
+
+  </div>
+</div>
+    
+<script src="app.js"></script>
+</body>
+</html>

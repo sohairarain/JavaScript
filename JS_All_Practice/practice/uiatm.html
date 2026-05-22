@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Account ATM Dashboard</title>
+    <link rel="stylesheet" href="uiatm.css">
+</head>
+<body>
+
+    <div class="wallet-container">
+        <div class="app-header">
+            <h2>M-Wallet Dashboard</h2>
+            <p>Manage Multiple Accounts</p>
+        </div>
+
+        <div class="accounts-grid">
+            <div class="account-card active-card" id="card-acc1">
+                <div class="card-type">Primary Account</div>
+                <h3 id="name-acc1">Sohair Khan</h3>
+                <span class="bal-title">Balance</span>
+                <h2 id="bal-acc1">Rs. 50,000</h2>
+            </div>
+
+            <div class="account-card" id="card-acc2">
+                <div class="card-type">Secondary Account</div>
+                <h3 id="name-acc2">Ali Ahmed</h3>
+                <span class="bal-title">Balance</span>
+                <h2 id="bal-acc2">Rs. 30,000</h2>
+            </div>
+        </div>
+
+        <div class="transaction-box">
+            <div class="input-group">
+                <label for="amount-input">Amount (Rs.)</label>
+                <input type="number" id="amount-input" placeholder="Enter amount to transact">
+            </div>
+
+            <div class="actions-wrapper">
+                
+                <div class="action-section">
+                    <span class="section-label">Account 1 (Sohair) Actions</span>
+                    <div class="btn-row">
+                        <button class="btn btn-primary" onclick="doWithdrawCall()">Withdraw (Call)</button>
+                        <button class="btn btn-success" onclick="doDepositCall()">Deposit (Call)</button>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <span class="section-label">Account 2 (Ali) Actions</span>
+                    <div class="btn-row">
+                        <button class="btn btn-blue" onclick="doWithdrawApply()">Withdraw (Apply)</button>
+                        <button class="btn btn-success-outline" onclick="doDepositApply()">Deposit (Apply)</button>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <span class="section-label">JS 'this' Engine Testing</span>
+                    <div class="btn-row full-width">
+                        <button class="btn btn-danger" onclick="testThisLose()">Lose Context 🚨</button>
+                        <button class="btn btn-dark" onclick="testBindFix()">Fix with Bind 🛡️</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
